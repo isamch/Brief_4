@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>form</title>
+
+		<!-- link -->
+		<link rel="stylesheet"
+			href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+		<link rel="stylesheet" href="assets/styles/style.css">
+
+	</head>
+
+
+	<body>
+
+		<div
+			class="bg-dark-subtle min-vh-100 d-flex align-items-center justify-content-center">
+
+			<form action class="text-center rounded-2 overflow-hidden">
+
+				<div id="formCont" class="pages d-flex align-items-center">
+
+					<!-- page 1 -->
+					<div class="page-1">
+						<div class="first-name form-floating mb-3">
+							<input type="text" id="fname" class="form-control"
+								placeholder="First Name" required>
+							<label for="fname">First Name</label>
+							<span id="spanfName" style="color: red; visibility: hidden;">.</span>
+						</div>
+
+						<div class="last-name form-floating mb-3">
+							<input type="text" id="lname" class="form-control"
+								placeholder="Last Name" required>
+								<span id="spanlName" style="color: red; visibility: hidden;">.</span>
+							<label for="lname">Last Name</label>
+						</div>
+
+						<div class="butt">
+							<button id="next-1" type="button"
+								class="btn btn-primary w-50">Next</button>
+						</div>
+					</div>
+
+					<!-- page 2 -->
+					<div class="page-2">
+						<div class="email form-floating mb-3">
+							<input type="email" id="email" class="form-control"
+								placeholder="Email" required>
+								<span id="emailSpan" style="color: red; visibility: hidden;">.</span>
+							<label for="email">Email</label>
+						</div>
+
+						<div class="phone-number form-floating mb-3">
+							<input type="tel" id="pNumber" class="form-control"
+								placeholder="Phone Number" required>
+								<span id="phoneSpan" style="color: red; visibility: hidden;">.</span>
+							<label for="pNumber">Phone Number</label>
+						</div>
+
+						<div class="butt">
+							<button id="previous-1" type="button"
+								class="btn btn-outline-primary w-25">Previous</button>
+							<button id="next-2" type="button"
+								class="btn btn-primary w-25">Next</button>
+						</div>
+					</div>
+
+					<!-- page 3 -->
+					<div class="page-3">
+						<div class="text-feedback form-floating mb-3">
+							<textarea name="feedback" id="feedback"
+								class="form-control"
+								placeholder="Enter Your Feedback"
+								style="resize: none; height: 100px;" required>
+							</textarea>
+							<span style="color: red;"></span>
+							<label for="feedback">Enter Your Feedback</label>
+						</div>
+
+						<div class="butt">
+							<button id="previous-2" type="button"
+								class="btn btn-outline-primary w-25">Previous</button>
+							<button id="next-3" type="submit"
+								class="btn btn-success w-25">Submit</button>
+						</div>
+					</div>
+
+				</div>
+
+			</form>
+		</div>
+
+		<!-- script -->
+		<script
+			src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+		<script defer src="assets/scripts/main.js"></script>
+	</body>
+</html>
