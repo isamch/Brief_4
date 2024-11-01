@@ -145,3 +145,73 @@ window.addEventListener('load', () => {
 
 
 
+// togle header change colro :
+
+const arrow = document.querySelector('.bi-arrow-left-square');
+const sideHead = document.querySelector('.head-mode');
+const colorsChange = document.querySelectorAll(".head-mode div");
+const bodyBackground = document.querySelector('#bodyback');
+
+arrow.addEventListener('click', function(){
+  sideHead.classList.toggle("toogle");
+  this.classList.toggle("rotate");
+});
+
+
+// const colors = ['white', 'red', 'blue', 'green'];
+
+
+// for (let index = 0; index < colorsChange.length; index++) {
+//   colorsChange[index].addEventListener('click', function(){
+    
+//   console.log('index : ' + index);
+
+//     colorsChange[index].addEventListener('click', function(){ 
+
+//       // bodyBackground.classList.add(colors[0]);
+//       // bodyBackground.classList.remove(colors[1]);
+//       // bodyBackground.classList.remove(colors[2]);
+//       // bodyBackground.classList.remove(colors[3]);
+
+//       console.log('class : ' + colorsChange[index].className);
+
+//     });
+
+
+//   });
+  
+// }
+
+colorsChange[0].addEventListener('click', function(){     
+  bodyBackground.classList.add('white');
+  bodyBackground.classList.remove('red');
+  bodyBackground.classList.remove('blue');
+  bodyBackground.classList.remove('green');
+});
+
+colorsChange[1].addEventListener('click', function(){     
+  bodyBackground.classList.add('red');
+  bodyBackground.classList.remove('white');
+  bodyBackground.classList.remove('blue');
+  bodyBackground.classList.remove('green');
+});
+
+colorsChange[2].addEventListener('click', function(){     
+  bodyBackground.classList.add('blue');
+  bodyBackground.classList.remove('red');
+  bodyBackground.classList.remove('white');
+  bodyBackground.classList.remove('green');
+});
+
+colorsChange[3].addEventListener('click', function(){     
+  bodyBackground.classList.add('green');
+  bodyBackground.classList.remove('red');
+  bodyBackground.classList.remove('blue');
+  bodyBackground.classList.remove('white');
+});
+
+
+
+
+
+

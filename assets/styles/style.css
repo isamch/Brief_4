@@ -1,3 +1,8 @@
+.bodyback{
+  background-color: #CED4DA;
+}
+
+
 form {
   width: 75%;
   height: 350px;
@@ -19,7 +24,6 @@ form {
 
 
 /* pop up */
-
 .info{
   position: fixed;
   top: 50%;
@@ -31,4 +35,67 @@ form {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   display: none;
   z-index: 1000;
+}
+
+/* header nav  */
+
+.head-mode {
+  background-color: rgba(255, 255, 255, 0.8); 
+  backdrop-filter: blur(10px); 
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 20px;
+  height: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.2s ease-in;
+  border-radius: 2px 0 0 2px;
+}
+
+.head-mode i{
+  font-size: 20px;
+  display: flex;
+  align-items: end;
+  cursor: pointer;
+}
+
+.head-mode i:hover{
+  color: #0d6efd;
+}
+
+.head-mode .colors-change{
+  height: 19px;
+  width: 19px;  
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.white{
+  background-color: #CED4DA;
+  transition: 0.3s ease-in;
+}
+.red{
+  background-color: red;
+  transition: 0.3s ease-in;
+}
+.blue{
+  background-color: blue;
+  transition: 0.3s ease-in;
+}
+.green{
+  background-color: green;
+  transition: 0.3s ease-in;
+}
+
+
+/* toggle */
+.toogle{
+  width: 120px;
+}
+/* rotate */
+.rotate{
+  transform: rotate(180deg);
 }
