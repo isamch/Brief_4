@@ -8,35 +8,17 @@ const thirdNext = document.getElementById('next-3');
 const firstPre = document.getElementById('previous-1');
 const secondPre = document.getElementById('previous-2');
 
-firstNext.addEventListener("click", () => {
-  formCont.style.justifyContent = 'center';
-});
-secondNext.addEventListener("click", () => {
-  formCont.style.justifyContent = 'end';
-});
+// firstNext.addEventListener("click", () => {
+//   formCont.style.justifyContent = 'center';
+// });
+// secondNext.addEventListener("click", () => {
+//   formCont.style.justifyContent = 'end';
+// });
 firstPre.addEventListener("click", () => {
   formCont.style.justifyContent = 'start';
 });
 secondPre.addEventListener("click", () => {
   formCont.style.justifyContent = 'center';
-});
-
-
-
-// local storage :
-var formInfo = document.querySelectorAll('form input, form textarea');
-// add data :
-formInfo.forEach((singleInput) => {
-  singleInput.addEventListener('input', () => {
-    localStorage.setItem(singleInput.id, singleInput.value);
-  });
-});
-
-// load data :
-window.addEventListener('load', () => {
-  formInfo.forEach((singleInput) => {
-    singleInput.value = localStorage.getItem(singleInput.id);
-  });
 });
 
 // validation :
@@ -46,13 +28,12 @@ const lName = document.getElementById("lname");
 const email = document.getElementById("email");
 const pNum = document.getElementById("pNumber");
 
-// regex :
 
+// regex :
 const fNameRegex = /^[A-Za-z]{3,20}$/;
 const lNameRegex = /^[A-Za-z]{3,20}$/;
 const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const phoneRegex = /^\+?[0-9]{1,3}[-.\s]?([0-9]{2,3}[-.\s]?){2,4}[0-9]{3,4}$/;
-
 
 
 fName.addEventListener("input", ()=>{
@@ -64,6 +45,10 @@ fName.addEventListener("input", ()=>{
   }else{
     spanfName.style.color = 'green';
     spanfName.textContent = "good";
+
+    firstNext.addEventListener("click", () => {
+      formCont.style.justifyContent = 'center';
+    });
   }
 });
 
@@ -76,6 +61,10 @@ lName.addEventListener("input", ()=>{
   }else{
     spanlName.style.color = 'green';
     spanlName.textContent = "good";
+
+    firstNext.addEventListener("click", () => {
+      formCont.style.justifyContent = 'center';
+    });
   }
 });
 
@@ -89,6 +78,10 @@ email.addEventListener("input", ()=>{
   }else{
     emailSpan.style.color = 'green';
     emailSpan.textContent = "good";
+
+    secondNext.addEventListener("click", () => {
+      formCont.style.justifyContent = 'end';
+    });
   }
 });
 
@@ -101,16 +94,53 @@ pNum.addEventListener("input", ()=>{
   }else{
     phoneSpan.style.color = 'green';
     phoneSpan.textContent = "good";
+
+    secondNext.addEventListener("click", () => {
+      formCont.style.justifyContent = 'end';
+    });
   }
 });
 
 
 
 
+// show popup info :
+const popUp = document.getElementById('popInfo');
+const closePop = document.getElementById('btnClosePop');
+
+thirdNext.addEventListener('click', ()=>{
+  popUp.style.display = 'block';
+});
+
+closePop.addEventListener('click', ()=>{
+  popUp.style.display = 'none';
+});
 
 
 
 
+// local storage :
+var popUpList = document.querySelectorAll('#popInfo span');
+
+var formInfo = document.querySelectorAll('form input, form textarea');
+
+
+formInfo.forEach((singleInput) => {
+  singleInput.addEventListener('input', () => {
+    localStorage.setItem(singleInput.id, singleInput.value);
+  
+  });
+});
+
+
+// load data :
+window.addEventListener('load', () => {
+  let j = 0;
+  for (let i = 2; i < 7 ; i++) {
+    popUpList[i].textContent = localStorage.getItem(formInfo[j].id);
+    j++;
+  } 
+});
 
 
 

@@ -18,3 +18,17 @@ form {
 }   
 
 
+/* pop up */
+
+.info{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 1000;
+}

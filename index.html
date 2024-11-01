@@ -18,7 +18,7 @@
 		<div
 			class="bg-dark-subtle min-vh-100 d-flex align-items-center justify-content-center">
 
-			<form action class="text-center rounded-2 overflow-hidden">
+			<form action class="text-center rounded-2 overflow-hidden ">
 
 				<div id="formCont" class="pages d-flex align-items-center">
 
@@ -83,15 +83,40 @@
 						<div class="butt">
 							<button id="previous-2" type="button"
 								class="btn btn-outline-primary w-25">Previous</button>
-							<button id="next-3" type="submit"
-								class="btn btn-success w-25">Submit</button>
+							<button id="next-3" type="button"
+								class="btn btn-success w-25">Next</button>
 						</div>
 					</div>
 
 				</div>
 
 			</form>
+
+
+			
 		</div>
+		
+		<!-- all info -->
+		<div id="popInfo" class="info">
+			
+			<span class="d-flex align-items-center justify-content-between">
+				<h3 class="mx-2">Your Entered Details</h3>
+					<button id="btnClosePop" type="button" class="close border-0 bg-danger rounded-1 ms-3" style="color: white;" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+			</span>
+			
+			<ul class="list-group">
+					<li class="list-group-item">First Name: <span  id="showFName"></span></li>
+					<li class="list-group-item">Last Name: <span id="showLName"></span></li>
+					<li class="list-group-item">Email: <span id="showEmail"></span></li>
+					<li class="list-group-item">Phone: <span id="showPhone"></span></li>
+					<li class="list-group-item">Feedback: <span id="showFeedback"></span></li>
+			</ul>
+		</div>
+
+		
+
 
 		<!-- script -->
 		<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
